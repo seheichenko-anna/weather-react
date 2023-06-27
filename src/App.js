@@ -58,6 +58,11 @@ export default function Weather() {
           Wind: <span id="wind">{weatherData.wind}</span> km/h
         </li>
       </ul>
+      <small>
+        <a href="https://github.com/seheichenko-anna/weather-react.git">
+          Open-source code
+        </a>
+      </small>
     </div>
   );
 }
