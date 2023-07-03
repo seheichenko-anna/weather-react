@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -14,7 +15,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       iconUrl: "http://openweathermap.org/img/wn/50d@2x.png",
-      date: "",
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -56,7 +57,10 @@ export default function Weather(props) {
         </div>
         <ul className="current-weather-info-list">
           <li>
-            Last update: <span id="date">{weatherData.date}</span>
+            Last update:{" "}
+            <span id="date">
+              <FormattedDate date={weatherData.date} />
+            </span>
           </li>
           <li id="description">{weatherData.description}</li>
           <li>
