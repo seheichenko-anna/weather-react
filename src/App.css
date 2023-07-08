@@ -3,15 +3,9 @@
 }
 
 :root {
-  --background-color: linear-gradient(to top,
-      lightgrey 0%,
-      lightgrey 1%,
-      #e0e0e0 26%,
-      #efefef 48%,
-      #d9d9d9 75%,
-      #bcbcbc 100%);
-  --btn-color: #ec6e4c;
-  --btn-hover-color: #c55c3e;
+  --background-color: radial-gradient(905px at 4.9% 85.8%, rgb(255, 243, 242) 0.1%, rgb(255, 247, 220) 57.6%);
+  --btn-color: #9376E0;
+  --btn-hover-color: #9376E0;
   --gray-text-color: #929292;
 }
 
@@ -24,12 +18,15 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-
+.units a {
+  color: var(--btn-color);
+  text-decoration: none;
+}
 
 form {
   display: flex;
   justify-content: space-between;
-  gap: 4px;
+  gap: 16px;
 }
 
 form .search-input {
@@ -86,7 +83,6 @@ li {
 }
 
 .current-weather {
-
   display: flex;
   justify-content: flex-end;
   gap: 4px;
@@ -113,7 +109,6 @@ li {
 }
 
 .weather-forecast {
-
   margin-top: 20px;
 }
 
@@ -142,7 +137,5 @@ li {
 }
 
 small {
-  grid-column: 1 /3;
-  grid-row: 5;
   margin-top: 20px;
 }

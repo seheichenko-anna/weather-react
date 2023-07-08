@@ -33,11 +33,7 @@ export default function WeatherInfo(props) {
           Wind: <span id="wind">{props.data.wind}</span> km/h
         </li>
       </ul>
-      <small>
-        <a href="https://github.com/seheichenko-anna/weather-react.git">
-          Open-source code
-        </a>
-      </small>
+      
     </div>
   );
 }
